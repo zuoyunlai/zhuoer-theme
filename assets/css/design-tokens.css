@@ -1,0 +1,261 @@
+/**
+ * ZHUOER Design Tokens
+ * 设计令牌 — 单一来源，style.css / enhanced.css 均引用此处
+ * 暖调极简主义 Aesthetic
+ *
+ * @package ZHUOER
+ * @since   1.0.73
+ */
+
+/* ============================================
+   1. COLOR TOKENS — Warm Minimalist Base
+   ============================================ */
+
+/* 背景色 — 暖白替代纯白 */
+:root {
+  --zhuoer-color-bg:             hsl(40, 33%, 99%);   /* 暖白 #fdfcfa */
+  --zhuoer-color-surface:        hsl(40, 20%, 97%);   /* 米白 #f7f6f4 */
+  --zhuoer-color-surface-hover:  hsl(40, 15%, 94%);  /* 悬浮态 */
+
+  /* 边框 — 暖灰 */
+  --zhuoer-color-border:         hsl(40, 10%, 88%);   /* #e2e0dc */
+  --zhuoer-color-border-strong:  hsl(40, 8%, 78%);   /* 强调边框 */
+
+  /* 文字 — 暖调深灰替代纯黑 */
+  --zhuoer-color-text:           hsl(30, 10%, 18%);   /* #2e2b27 */
+  --zhuoer-color-text-muted:     hsl(30, 6%, 48%);    /* #7a756d */
+  --zhuoer-color-text-subtle:    hsl(30, 4%, 68%);    /* #aaa49c */
+
+  /* 深色模式 */
+  --zhuoer-color-dark-bg:             hsl(30, 8%, 10%);    /* #1a1917 */
+  --zhuoer-color-dark-surface:        hsl(30, 6%, 14%);    /* #222120 */
+  --zhuoer-color-dark-surface-hover:  hsl(30, 6%, 18%);   /* #2c2a27 */
+  --zhuoer-color-dark-border:         hsl(30, 4%, 22%);    /* #383532 */
+  --zhuoer-color-dark-text:           hsl(30, 10%, 92%);   /* #ece9e3 */
+  --zhuoer-color-dark-text-muted:     hsl(30, 4%, 58%);    /* #948f87 */
+  --zhuoer-color-dark-text-subtle:    hsl(30, 3%, 42%);    /* #6b6660 */
+
+  /* 暗色背景区（如 footer） */
+  --zhuoer-color-dark-section-bg:    hsl(30, 6%, 12%);
+}
+
+/* ============================================
+   2. TYPOGRAPHY TOKENS
+   ============================================ */
+
+:root {
+  /* 字体栈 */
+  --zhuoer-font-family:  'Noto Sans SC', -apple-system, BlinkMacSystemFont,
+                        'Segoe UI', 'PingFang SC', 'Microsoft YaHei',
+                        'Hiragino Sans GB', sans-serif;
+  --zhuoer-font-serif: 'Noto Serif SC', 'Songti SC', 'SimSun', Georgia, serif;
+  --zhuoer-font-mono:  'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+
+  /* 字号比例 — 基于 16px */
+  --zhuoer-text-xs:   0.75rem;    /* 12px */
+  --zhuoer-text-sm:   0.875rem;   /* 14px */
+  --zhuoer-text-base: 1rem;       /* 16px */
+  --zhuoer-text-lg:   1.125rem;   /* 18px */
+  --zhuoer-text-xl:   1.25rem;    /* 20px */
+  --zhuoer-text-2xl:  1.5rem;     /* 24px */
+  --zhuoer-text-3xl:  1.875rem;   /* 30px */
+  --zhuoer-text-4xl:  2.25rem;    /* 36px */
+
+  /* 行高 */
+  --zhuoer-leading-tight:  1.25;
+  --zhuoer-leading-snug:  1.4;
+  --zhuoer-leading-normal: 1.7;
+  --zhuoer-leading-loose:  1.85;
+
+  /* 字重 */
+  --zhuoer-font-normal:  400;
+  --zhuoer-font-medium:  500;
+  --zhuoer-font-semibold: 600;
+  --zhuoer-font-bold:     700;
+
+  /* 字间距 */
+  --zhuoer-tracking-tight:  -0.025em;
+  --zhuoer-tracking-snug:  -0.015em;
+  --zhuoer-tracking-normal: 0;
+  --zhuoer-tracking-wide:   0.02em;
+  --zhuoer-tracking-wider:  0.05em;
+}
+
+/* ============================================
+   3. RADIUS TOKENS — 4档圆角系统
+   ============================================ */
+
+:root {
+  --zhuoer-radius-xs:   4px;      /* 代码块、small chip */
+  --zhuoer-radius-sm:   6px;      /* 按钮、输入框 */
+  --zhuoer-radius:      8px;      /* 卡片、modal */
+  --zhuoer-radius-lg:   12px;     /* 大卡片、sidebar */
+  --zhuoer-radius-xl:   16px;     /* Hero、Large panel */
+  --zhuoer-radius-full: 9999px;   /* Pill / Capsule */
+}
+
+/* ============================================
+   4. SHADOW TOKENS — Light Mode
+   ============================================ */
+
+:root {
+  /* 柔和暖调阴影（不偏蓝/紫） */
+  --zhuoer-shadow-xs: 0 1px 2px hsla(30, 10%, 18%, 0.04);
+  --zhuoer-shadow-sm: 0 2px 6px hsla(30, 10%, 18%, 0.06);
+  --zhuoer-shadow:    0 4px 14px hsla(30, 10%, 18%, 0.08);
+  --zhuoer-shadow-md: 0 6px 20px hsla(30, 10%, 18%, 0.09);
+  --zhuoer-shadow-lg: 0 10px 32px hsla(30, 10%, 18%, 0.11);
+  --zhuoer-shadow-xl: 0 16px 48px hsla(30, 10%, 18%, 0.13);
+
+  /* 悬停阴影（略深） */
+  --zhuoer-shadow-hover: 0 8px 24px hsla(30, 10%, 18%, 0.12);
+}
+
+/* ============================================
+   5. SHADOW TOKENS — Dark Mode
+   ============================================ */
+
+[data-theme="dark"] {
+  --zhuoer-shadow-xs: 0 1px 2px hsla(0, 0%, 0%, 0.25);
+  --zhuoer-shadow-sm: 0 2px 6px hsla(0, 0%, 0%, 0.28);
+  --zhuoer-shadow:    0 4px 14px hsla(0, 0%, 0%, 0.32);
+  --zhuoer-shadow-md: 0 6px 20px hsla(0, 0%, 0%, 0.36);
+  --zhuoer-shadow-lg: 0 10px 32px hsla(0, 0%, 0%, 0.40);
+  --zhuoer-shadow-xl: 0 16px 48px hsla(0, 0%, 0%, 0.45);
+  --zhuoer-shadow-hover: 0 8px 24px hsla(0, 0%, 0%, 0.42);
+}
+
+/* ============================================
+   6. MOTION / EASING TOKENS
+   ============================================ */
+
+:root {
+  /* 缓动曲线 */
+  --zhuoer-ease:      cubic-bezier(0.4, 0, 0.2, 1);    /* 默认 */
+  --zhuoer-ease-out:  cubic-bezier(0, 0, 0.2, 1);       /* 退出 */
+  --zhuoer-ease-in:   cubic-bezier(0.4, 0, 1, 1);       /* 进入 */
+  --zhuoer-ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1); /* 弹性 */
+
+  /* 时长 */
+  --zhuoer-duration-fast:   0.12s;
+  --zhuoer-duration:         0.22s;
+  --zhuoer-duration-slow:   0.38s;
+  --zhuoer-duration-slower: 0.55s;
+
+  /* 综合过渡变量 */
+  --zhuoer-transition:        color var(--zhuoer-duration) var(--zhuoer-ease),
+                               background-color var(--zhuoer-duration) var(--zhuoer-ease),
+                               border-color var(--zhuoer-duration) var(--zhuoer-ease),
+                               box-shadow var(--zhuoer-duration) var(--zhuoer-ease);
+  --zhuoer-transition-fast:   color var(--zhuoer-duration-fast) var(--zhuoer-ease),
+                               background-color var(--zhuoer-duration-fast) var(--zhuoer-ease),
+                               border-color var(--zhuoer-duration-fast) var(--zhuoer-ease);
+  --zhuoer-transition-slow:  transform var(--zhuoer-duration-slow) var(--zhuoer-ease-out),
+                               box-shadow var(--zhuoer-duration-slow) var(--zhuoer-ease-out);
+}
+
+/* ============================================
+   7. SPACING TOKENS
+   ============================================ */
+
+:root {
+  --zhuoer-space-1:  0.25rem;   /* 4px */
+  --zhuoer-space-2:  0.5rem;    /* 8px */
+  --zhuoer-space-3:  0.75rem;   /* 12px */
+  --zhuoer-space-4:  1rem;      /* 16px */
+  --zhuoer-space-5:  1.25rem;   /* 20px */
+  --zhuoer-space-6:  1.5rem;    /* 24px */
+  --zhuoer-space-8:  2rem;      /* 32px */
+  --zhuoer-space-10: 2.5rem;    /* 40px */
+  --zhuoer-space-12: 3rem;      /* 48px */
+  --zhuoer-space-16: 4rem;      /* 64px */
+  --zhuoer-space-20: 5rem;      /* 80px */
+}
+
+/* ============================================
+   8. LAYOUT TOKENS
+   ============================================ */
+
+:root {
+  --zhuoer-content-width:  900px;
+  --zhuoer-wide-width:      1440px;
+  --zhuoer-header-height:    64px;
+  --zhuoer-sidebar-width:    280px;
+}
+
+/* ============================================
+   9. Z-INDEX SCALE
+   ============================================ */
+
+:root {
+  --zhuoer-z-base:     0;
+  --zhuoer-z-dropdown: 100;
+  --zhuoer-z-sticky:   200;
+  --zhuoer-z-overlay:  300;
+  --zhuoer-z-modal:    400;
+  --zhuoer-z-toast:    500;
+}
+
+/* ============================================
+   10. KEYFRAME ANIMATIONS
+   ============================================ */
+
+@keyframes zhuoer-fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes zhuoer-slide-up {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes zhuoer-slide-down {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes zhuoer-scale-in {
+  from { opacity: 0; transform: scale(0.96); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes zhuoer-shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* ── Entrance animation utility classes ── */
+.zhuoer-animate-fade-in {
+  animation: zhuoer-fade-in var(--zhuoer-duration-slow) var(--zhuoer-ease-out) both;
+}
+
+.zhuoer-animate-slide-up {
+  animation: zhuoer-slide-up var(--zhuoer-duration-slow) var(--zhuoer-ease-out) both;
+}
+
+.zhuoer-animate-scale-in {
+  animation: zhuoer-scale-in var(--zhuoer-duration) var(--zhuoer-ease-out) both;
+}
+
+/* Stagger delays for list items */
+.zhuoer-stagger > *:nth-child(1)  { animation-delay: 0ms; }
+.zhuoer-stagger > *:nth-child(2)  { animation-delay: 60ms; }
+.zhuoer-stagger > *:nth-child(3)  { animation-delay: 120ms; }
+.zhuoer-stagger > *:nth-child(4)  { animation-delay: 180ms; }
+.zhuoer-stagger > *:nth-child(5)  { animation-delay: 240ms; }
+.zhuoer-stagger > *:nth-child(6)  { animation-delay: 300ms; }
+.zhuoer-stagger > *:nth-child(n+7) { animation-delay: 360ms; }
+
+/* ── Shimmer loading skeleton ── */
+.zhuoer-skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--zhuoer-color-surface) 25%,
+    var(--zhuoer-color-surface-hover) 50%,
+    var(--zhuoer-color-surface) 75%
+  );
+  background-size: 200% 100%;
+  animation: zhuoer-shimmer 1.5s ease-in-out infinite;
+  border-radius: var(--zhuoer-radius-sm);
+}

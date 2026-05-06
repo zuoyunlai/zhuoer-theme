@@ -1,0 +1,13 @@
+{
+  "name": "zhuoer-theme",
+  "version": "1.0.71",
+  "description": "ZHUOER WordPress Theme build tools",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^6.0.0"
+  }
+}

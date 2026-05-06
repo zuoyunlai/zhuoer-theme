@@ -1,0 +1,95 @@
+/* ZHUOER Print Styles */
+
+@media print {
+    .zhuoer-header,
+    .zhuoer-footer,
+    .zhuoer-sidebar,
+    .zhuoer-comments,
+    .zhuoer-post-nav,
+    .zhuoer-pagination,
+    .zhuoer-single__tags,
+    .zhuoer-author-bio,
+    .zhuoer-menu-toggle,
+    .zhuoer-nav { display: none !important; }
+
+    body {
+        font-size: 12pt;
+        color: #000;
+        background: #fff;
+        line-height: 1.6;
+    }
+
+    a { color: #000; text-decoration: underline; }
+
+    h1 { font-size: 22pt; }
+    h2 { font-size: 18pt; }
+    h3 { font-size: 14pt; }
+
+    .zhuoer-container { max-width: 100%; padding: 0; margin: 0; }
+
+    .zhuoer-single__content { font-size: 12pt; line-height: 1.6; }
+
+    .zhuoer-single__content img { max-width: 100%; page-break-inside: avoid; }
+
+    blockquote, pre { page-break-inside: avoid; }
+
+    a[href]::after {
+        content: " (" attr(href) ")";
+        font-size: 10pt;
+        color: #666;
+    }
+}
+
+/* Entry thumbnail (archive list) */
+.zhuoer-entry__thumb {
+    display: block;
+    margin: 1rem 0;
+    border-radius: 6px;
+    overflow: hidden;
+    background: var(--zhuoer-color-surface);
+}
+.zhuoer-entry__thumb img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+.zhuoer-entry__thumb:hover img {
+    transform: scale(1.02);
+}
+
+/* 暗色打印样式 — 匹配主题 [data-theme="dark"] 选择器 */
+@media (prefers-color-scheme: dark) {
+  [data-theme="dark"] {
+    background-color: var(--zhuoer-color-bg);
+    color: var(--zhuoer-color-text);
+  }
+  .dark-mode input, .dark-mode textarea { background: #252525; border-color: #3c3c3c; color: #e8e8e8; }
+  .dark-mode .zhuoer-layout-sidebar .widget { background: #252525; border-color: #3c3c3c; }
+  .dark-mode .zhuoer-layout-sidebar .widget li { border-bottom-color: #3c3c3c; }
+  .dark-mode .zhuoer-layout-sidebar .widget li a { color: #9a9a9a; }
+  .dark-mode .zhuoer-search-form input { background: #252525; border-color: #3c3c3c; color: #e8e8e8; }
+}
+
+/* Dark mode toggle button */
+.zhuoer-theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--zhuoer-color-border);
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  color: var(--zhuoer-color-text-muted);
+  transition: all 0.2s ease;
+  padding: 0;
+  font-size: 0;
+}
+.zhuoer-theme-toggle:hover {
+  background: var(--zhuoer-color-surface);
+  color: var(--zhuoer-color-text);
+}
+.zhuoer-theme-toggle svg { width: 18px; height: 18px; }

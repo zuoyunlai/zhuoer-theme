@@ -1,0 +1,44 @@
+/**
+ * Shop Header Styles — compact logo + header
+ *
+ * @package ZHUOER
+ */
+
+/* Shop header: compact logo, tighter proportions */
+.zhuoer-header__brand {
+    margin-right: 1rem;
+    flex-shrink: 0;
+}
+
+/* Logo — constrain height so it doesn't dominate the header */
+.zhuoer-header__logo-link,
+.zhuoer-header__logo-link .custom-logo-link {
+    display: flex;
+    align-items: center;
+    height: 44px;
+    max-height: 44px;
+}
+
+.zhuoer-header__logo-link .custom-logo,
+.zhuoer-header__logo-link img {
+    height: auto !important;
+    max-height: 44px !important;
+    width: auto !important;
+    max-width: 160px;
+    object-fit: contain;
+}
+
+/* Fallback: also target the default custom-logo classes from the theme */
+body.woocommerce-page .custom-logo,
+.zhuoer-header .custom-logo {
+    max-height: 44px !important;
+    width: auto !important;
+    height: auto !important;
+}
+
+body.woocommerce-page .custom-logo-link,
+.zhuoer-header .custom-logo-link {
+    display: flex !important;
+    align-items: center !important;
+    max-height: 44px !important;
+}

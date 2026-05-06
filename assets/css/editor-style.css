@@ -1,0 +1,508 @@
+/* ============================================================
+   ZHUOER Editor Styles — Gutenberg Block Editor
+   与前端样式保持一致，所见即所得
+   ============================================================ */
+
+/* ── 基础排版 ── */
+.wp-block p {
+    font-size: 1.0625rem;
+    line-height: 1.9;
+    color: #202124;
+    margin-bottom: 1rem;
+    text-align: justify;
+    word-break: break-word;
+}
+
+/* ── 标题 ── */
+.wp-block h2 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    line-height: 1.3;
+    color: #202124;
+    border-bottom: 2px solid var(--zhuoer-editor-primary, #1a73e8);
+    padding-bottom: 0.5rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: -0.01em;
+}
+
+.wp-block h3 {
+    font-size: 1.375rem;
+    font-weight: 600;
+    line-height: 1.35;
+    color: #202124;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+    padding-left: 0.75rem;
+    border-left: 3px solid var(--zhuoer-editor-primary, #1a73e8);
+}
+
+.wp-block h4 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #5f6368;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.wp-block h5 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #5f6368;
+    margin-top: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.wp-block h6 {
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: #5f6368;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+/* ── 引用块 (Quote) ── */
+.wp-block-quote {
+    border-left: 4px solid var(--zhuoer-editor-primary, #1a73e8);
+    padding: 1.25rem 1.5rem;
+    margin: 1.5rem 0;
+    background: linear-gradient(90deg, rgba(26,115,232,0.04) 0%, #fafafa 100%);
+    border-radius: 0 6px 6px 0;
+    position: relative;
+    font-style: normal;
+    color: #5f6368;
+}
+
+.wp-block-quote::before {
+    content: '"';
+    position: absolute;
+    top: 0.5rem;
+    left: 0.75rem;
+    font-size: 2.5rem;
+    line-height: 1;
+    color: var(--zhuoer-editor-primary, #1a73e8);
+    opacity: 0.15;
+    font-family: Georgia, serif;
+}
+
+.wp-block-quote p {
+    font-size: 1.0625rem;
+    line-height: 1.8;
+    color: #5f6368;
+    margin-bottom: 0.75rem;
+    text-indent: 0 !important;
+}
+
+.wp-block-quote cite {
+    font-size: 0.875rem;
+    color: #5f6368;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.wp-block-quote cite::before {
+    content: '— ';
+}
+
+/* ── 摘录引用 (Pullquote) ── */
+.wp-block-pullquote {
+    border-top: 3px solid var(--zhuoer-editor-primary, #1a73e8);
+    border-bottom: 3px solid var(--zhuoer-editor-primary, #1a73e8);
+    border-left: none;
+    border-right: none;
+    padding: 2rem 2.5rem;
+    margin: 2rem 0;
+    background: #fafafa;
+    text-align: center;
+}
+
+.wp-block-pullquote blockquote {
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+}
+
+.wp-block-pullquote blockquote::before {
+    display: none;
+}
+
+.wp-block-pullquote p {
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.7;
+    color: #202124;
+    text-indent: 0 !important;
+}
+
+.wp-block-pullquote cite {
+    font-size: 0.875rem;
+    color: #5f6368;
+    margin-top: 1rem;
+    display: block;
+}
+
+/* ── 诗篇 (Verse) ── */
+.wp-block-verse {
+    font-family: 'Noto Serif SC', Georgia, 'Songti SC', serif;
+    font-size: 1.0625rem;
+    line-height: 2.2;
+    color: #5f6368;
+    background: linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%);
+    border-left: 3px solid var(--zhuoer-editor-primary, #1a73e8);
+    border-radius: 0 6px 6px 0;
+    padding: 1.5rem 2rem;
+    margin: 1.5rem 0;
+    white-space: pre-wrap;
+    font-style: italic;
+}
+
+.wp-block-verse pre {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+}
+
+/* ── 代码块 ── */
+.wp-block-code {
+    background: #1e1e2e;
+    border-radius: 8px;
+    padding: 1.25rem 1.5rem;
+    margin: 1.5rem 0;
+    overflow-x: auto;
+}
+
+.wp-block-code code {
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    font-size: 0.875rem;
+    line-height: 1.7;
+    color: #cdd6f4;
+    background: none;
+    padding: 0;
+}
+
+/* 行内代码 */
+.wp-block :not(pre) > code {
+    background: rgba(26, 115, 232, 0.08);
+    color: #d73a49;
+    padding: 0.15em 0.45em;
+    border-radius: 4px;
+    font-size: 0.875em;
+    font-weight: 500;
+}
+
+/* ── 预格式化 ── */
+.wp-block-preformatted {
+    background: #f5f5f5;
+    border-radius: 8px;
+    padding: 1.25rem 1.5rem;
+    margin: 1.5rem 0;
+    font-size: 0.9375rem;
+    line-height: 1.7;
+    color: #202124;
+    overflow-x: auto;
+}
+
+/* ── 表格 ── */
+.wp-block-table {
+    margin: 1.5rem 0;
+}
+
+.wp-block-table table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 1px solid #e8e8e8;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.wp-block-table thead th {
+    background: #fafafa;
+    font-weight: 600;
+    font-size: 0.875rem;
+    padding: 0.75rem 1rem;
+    border-bottom: 2px solid var(--zhuoer-editor-primary, #1a73e8);
+    text-align: left;
+    color: #202124;
+}
+
+.wp-block-table tbody td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #e8e8e8;
+    font-size: 0.9375rem;
+}
+
+.wp-block-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.wp-block-table tbody tr:hover td {
+    background: #fafafa;
+}
+
+/* ── 分隔线 ── */
+.wp-block-separator {
+    border: none;
+    border-top: 1px solid #e8e8e8;
+    margin: 2rem auto;
+    max-width: 100%;
+}
+
+.wp-block-separator.is-style-wide {
+    max-width: 100%;
+}
+
+.wp-block-separator.is-style-dots {
+    border: none;
+    text-align: center;
+    max-width: none;
+    line-height: 1;
+}
+
+.wp-block-separator.is-style-dots::before {
+    content: '···';
+    font-size: 1.5rem;
+    letter-spacing: 0.5em;
+    color: #e8e8e8;
+}
+
+/* ── 按钮 ── */
+.wp-block-button__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: var(--zhuoer-editor-primary, #1a73e8);
+    color: #ffffff !important;
+    border-radius: 100px;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    text-decoration: none !important;
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.wp-block-button__link:hover {
+    background: #1765d4;
+    box-shadow: 0 4px 12px rgba(26, 115, 232, 0.25);
+    transform: translateY(-1px);
+}
+
+/* ── 图片 ── */
+.wp-block-image {
+    margin: 1.5rem 0;
+}
+
+.wp-block-image img {
+    border-radius: 8px;
+    display: block;
+}
+
+.wp-block-image figcaption {
+    text-align: center;
+    font-size: 0.8125rem;
+    color: #5f6368;
+    margin-top: 0.5rem;
+    font-style: italic;
+}
+
+/* ── 画廊 ── */
+.wp-block-gallery {
+    gap: 0.75rem;
+    margin: 1.5rem 0;
+}
+
+.wp-block-gallery .wp-block-image img {
+    border-radius: 6px;
+}
+
+/* ── 列表 ── */
+.wp-block ul, .wp-block ol {
+    padding-left: 1.75rem;
+    margin: 1rem 0;
+}
+
+.wp-block ul li, .wp-block ol li {
+    margin-bottom: 0.35rem;
+    line-height: 1.7;
+}
+
+/* ── 媒体与文字 ── */
+.wp-block-media-text {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* ── 栏目 / 组 ── */
+.wp-block-group {
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.wp-block-group.has-background {
+    border-radius: 8px;
+}
+
+/* ── 详情 / 风琴折 ── */
+.wp-block-details {
+    background: #fafafa;
+    border: 1px solid #e8e8e8;
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    margin: 1rem 0;
+}
+
+.wp-block-details summary {
+    font-weight: 600;
+    color: #202124;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.wp-block-details summary::-webkit-details-marker {
+    display: none;
+}
+
+.wp-block-details summary::before {
+    content: '▸';
+    font-size: 0.875rem;
+    color: var(--zhuoer-editor-primary, #1a73e8);
+    transition: transform 0.2s ease;
+}
+
+.wp-block-details[open] summary::before {
+    transform: rotate(90deg);
+}
+
+.wp-block-details > *:not(summary) {
+    margin-top: 0.75rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid #e8e8e8;
+}
+
+/* ── 标签云 ── */
+.wp-block-tag-cloud a {
+    display: inline-block;
+    padding: 0.25rem 0.7rem;
+    font-size: 0.75rem !important;
+    font-weight: 500;
+    color: #5f6368;
+    background: #fafafa;
+    border: 1px solid #e8e8e8;
+    border-radius: 100px;
+    margin: 0.15rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.wp-block-tag-cloud a:hover {
+    background: var(--zhuoer-editor-primary, #1a73e8);
+    color: #ffffff;
+    border-color: var(--zhuoer-editor-primary, #1a73e8);
+}
+
+/* ── 最新文章 / 归档 ── */
+.wp-block-latest-posts li,
+.wp-block-archives li,
+.wp-block-categories li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.wp-block-latest-posts li:last-child,
+.wp-block-archives li:last-child,
+.wp-block-categories li:last-child {
+    border-bottom: none;
+}
+
+.wp-block-latest-posts a,
+.wp-block-archives a,
+.wp-block-categories a {
+    color: #202124;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.wp-block-latest-posts a:hover,
+.wp-block-archives a:hover,
+.wp-block-categories a:hover {
+    color: var(--zhuoer-editor-primary, #1a73e8);
+}
+
+/* ── 日历 ── */
+.wp-block-calendar table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.wp-block-calendar caption {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #202124;
+}
+
+.wp-block-calendar th {
+    background: #fafafa;
+    font-weight: 600;
+    padding: 0.5rem;
+    border-bottom: 2px solid var(--zhuoer-editor-primary, #1a73e8);
+}
+
+.wp-block-calendar td {
+    padding: 0.5rem;
+    text-align: center;
+    border: 1px solid #f0f0f0;
+}
+
+.wp-block-calendar td a {
+    color: var(--zhuoer-editor-primary, #1a73e8);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* ── 文件下载 ── */
+.wp-block-file {
+    background: #fafafa;
+    border: 1px solid #e8e8e8;
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.wp-block-file a {
+    color: #202124;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.wp-block-file__button {
+    background: var(--zhuoer-editor-primary, #1a73e8) !important;
+    color: #fff !important;
+    border-radius: 100px !important;
+    padding: 0.5rem 1rem !important;
+    font-size: 0.875rem !important;
+    font-weight: 600;
+}
+
+/* ── 嵌入 ── */
+.wp-block-embed {
+    margin: 1.5rem 0;
+}
+
+.wp-block-embed iframe {
+    border-radius: 8px;
+}

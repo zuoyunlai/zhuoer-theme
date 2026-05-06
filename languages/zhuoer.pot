@@ -1,0 +1,330 @@
+# Copyright (C) 2026 Yunlai Zuo
+# This file is distributed under the GNU GPL v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: ZHUOER 1.0.69\n"
+"Report-Msgid-Bugs-To: https://zuoyunlai.com\n"
+"POT-Creation-Date: 2026-04-24 12:59:00+08:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2026-04-24 12:59+08:00\n"
+"Last-Translator: Yunlai Zuo <zuoyunlai@yily.top>\n"
+"Language-Team: Yunlai Zuo <zuoyunlai@yily.top>\n"
+
+#: 404.php:16
+msgid "页面未找到"
+msgstr ""
+
+#: 404.php:18
+msgid "您访问的页面不存在或已被移动。"
+msgstr ""
+
+#: 404.php:21
+msgid "返回首页"
+msgstr ""
+
+#: comments.php:13
+msgctxt "aria-label"
+msgid "Comments"
+msgstr ""
+
+#: comments.php:21
+msgid "%s 条评论"
+msgid_plural "%s 条评论"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:25
+msgctxt "aria-label"
+msgid "Comment list"
+msgstr ""
+
+#: comments.php:44
+msgid "评论已关闭"
+msgstr ""
+
+#: footer.php:29
+msgid "All rights reserved."
+msgstr ""
+
+#: front-page.php:94
+msgid "暂无文章"
+msgstr ""
+
+#: functions.php:43
+msgid "Primary Menu"
+msgstr ""
+
+#: functions.php:44
+msgid "Footer Menu"
+msgstr ""
+
+#: functions.php:68
+msgid "Small"
+msgstr ""
+
+#: functions.php:69
+msgid "Normal"
+msgstr ""
+
+#: functions.php:70
+msgid "Medium"
+msgstr ""
+
+#: functions.php:71
+msgid "Large"
+msgstr ""
+
+#: functions.php:72
+msgid "Huge"
+msgstr ""
+
+#: functions.php:120
+msgid "Sidebar"
+msgstr ""
+
+#: functions.php:127
+msgid "Footer Widgets"
+msgstr ""
+
+#: header.php:23
+msgctxt "aria-label"
+msgid "Primary Menu"
+msgstr ""
+
+#: header.php:45
+msgctxt "aria-label"
+msgid "搜索"
+msgstr ""
+
+#: header.php:54
+msgctxt "aria-label"
+msgid "切换暗色模式"
+msgstr ""
+
+#: header.php:54
+msgctxt "title"
+msgid "切换暗色模式"
+msgstr ""
+
+#: header.php:63
+msgctxt "aria-label"
+msgid "搜索"
+msgstr ""
+
+#: header.php:70
+msgctxt "aria-label"
+msgid "Toggle menu"
+msgstr ""
+
+#: inc/customizer.php:73
+msgid "ZHUOER 主题设置"
+msgstr ""
+
+#: inc/customizer.php:74
+msgid "ZHUOER 主题设置"
+msgstr ""
+
+#: inc/customizer.php:96
+msgid "SEO 与统计"
+msgstr ""
+
+#: inc/customizer.php:97
+msgid "首页设置"
+msgstr ""
+
+#: inc/customizer.php:98
+msgid "社交链接"
+msgstr ""
+
+#: inc/customizer.php:99
+msgid "文章显示"
+msgstr ""
+
+#: inc/customizer.php:100
+msgid "布局设置"
+msgstr ""
+
+#: inc/customizer.php:105
+msgid "首页标题"
+msgstr ""
+
+#: inc/customizer.php:107
+msgid "留空则使用网站名称"
+msgstr ""
+
+#: inc/template-tags.php:124
+msgid "1 min read"
+msgstr ""
+
+#: inc/template-tags.php:126
+msgid "%d min read"
+msgstr ""
+
+#: index.php:75
+msgid "Nothing found"
+msgstr ""
+
+#: index.php:77
+msgid "It seems we can't find what you're looking for."
+msgstr ""
+
+#: singular.php:102
+msgctxt "aria-label"
+msgid "内容路径"
+msgstr ""
+
+#: singular.php:147
+msgid "上一篇"
+msgstr ""
+
+#: singular.php:154
+msgid "下一篇"
+msgstr ""
+
+#: singular.php:226
+msgid "相关文章"
+msgstr ""
+
+#: inc/class-zhuoer-recent-comments-widget.php:28
+msgid "ZHUOER 最新评论"
+msgstr ""
+
+#: inc/class-zhuoer-recent-comments-widget.php:29
+msgid "显示站点的最新评论"
+msgstr ""
+
+#: inc/class-zhuoer-recent-comments-widget.php:40
+msgid "最新评论"
+msgstr ""
+
+#: inc/class-zhuoer-recent-comments-widget.php:66
+msgid "暂无评论"
+msgstr ""
+
+#: inc/class-zhuoer-recent-comments-widget.php:77
+msgid "标题："
+msgstr ""
+
+#: inc/class-zhuoer-recent-comments-widget.php:82
+msgid "显示数量："
+msgstr ""
+
+#: searchform.php
+msgctxt "label"
+msgid "Search"
+msgstr ""
+
+#: searchform.php
+msgctxt "placeholder"
+msgid "Search …"
+msgstr ""
+
+#: searchform.php
+msgctxt "value"
+msgid "Search"
+msgstr ""
+
+#. translators: %s: search query
+#: search.php
+msgid "Search Results for: %s"
+msgstr ""
+
+#: page-nav-template.php
+msgid "Hero Section"
+msgstr ""
+
+#: page-nav-template.php
+msgid "A full-width hero with title and CTA."
+msgstr ""
+
+#: page-nav-template.php
+msgid "Rounded"
+msgstr ""
+
+#: functions.php
+msgid "ZHUOER Accent"
+msgstr ""
+
+#: functions.php
+msgid "Primary"
+msgstr ""
+
+#: functions.php
+msgid "Primary Dark"
+msgstr ""
+
+#: functions.php
+msgid "Primary Light"
+msgstr ""
+
+#: functions.php
+msgid "Primary Border"
+msgstr ""
+
+#: functions.php
+msgid "Text Dark"
+msgstr ""
+
+#: functions.php
+msgid "Text Muted"
+msgstr ""
+
+#: functions.php
+msgid "Surface"
+msgstr ""
+
+#: functions.php
+msgid "Border"
+msgstr ""
+
+#. translators: 1: title
+#: comments.php
+msgid "发表评论"
+msgstr ""
+
+#: comments.php
+msgid "取消回复"
+msgstr ""
+
+#: comments.php
+msgid "评论内容"
+msgstr ""
+
+#: comments.php
+msgid "写下你的评论…"
+msgstr ""
+
+#: comments.php
+msgid "昵称 *"
+msgstr ""
+
+#: comments.php
+msgid "邮箱 *"
+msgstr ""
+
+#: comments.php
+msgid "网站"
+msgstr ""
+
+#: comments.php
+msgid "以 %s 的身份登录"
+msgstr ""
+
+#: comments.php
+msgid "编辑个人资料"
+msgstr ""
+
+#: comments.php
+msgid "注销"
+msgstr ""
+
+#: singular.php
+msgctxt "aria-label"
+msgid "相关文章路径"
+msgstr ""
+
+#: singular.php
+msgid "首页"
+msgstr ""
