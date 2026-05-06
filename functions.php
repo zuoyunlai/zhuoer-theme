@@ -121,7 +121,7 @@ add_action( 'admin_head', 'zhuoer_editor_dynamic_css', 1 );
  */
 function zhuoer_compute_colors( string $hex ): ?array {
     // Transient cache for color computation (12 hours)
-    $cache_key = 'zhuoer_colors_' . sanitize_hex_color_no_hash( $hex );
+    $cache_key = 'zhuoer_colors_v2_' . sanitize_hex_color_no_hash( $hex );
     $cached = get_transient( $cache_key );
     if ( $cached ) {
         return $cached;
