@@ -543,9 +543,14 @@ add_action( 'wp_head', function () {
 --zhuoer-color-link:%8$s;
 --zhuoer-color-link-hover:%9$s;
 --zhuoer-color-accent:%8$s;
---zhuoer-hero-grad-1:%10$s;
---zhuoer-hero-grad-2:%11$s;
---zhuoer-hero-grad-3:%12$s;
+--zhuoer-color-primary-bg:%10$s;
+--zhuoer-color-primary-border:%11$s;
+--zhuoer-color-primary-light:%9$s;
+--zhuoer-color-primary-alpha:%12$s;
+--zhuoer-color-primary-alpha-2:%13$s;
+--zhuoer-hero-grad-1:%14$s;
+--zhuoer-hero-grad-2:%15$s;
+--zhuoer-hero-grad-3:%16$s;
 }
 </style>',
         'hsl(30, 8%, 10%)',   // dark-bg
@@ -556,6 +561,8 @@ add_action( 'wp_head', function () {
         'hsl(30, 4%, 58%)',   // dark-text-muted
         'hsl(30, 3%, 42%)',   // dark-text-subtle
         esc_attr( $c['link-dark'] ), esc_attr( $c['link-hover-dark'] ),
+        esc_attr( $c['dark-primary-bg'] ), esc_attr( $c['dark-primary-border'] ),
+        esc_attr( $c['dark-alpha'] ), esc_attr( $c['dark-alpha-2'] ),
         esc_attr( $c['hero-grad-dark-1'] ), esc_attr( $c['hero-grad-dark-2'] ), esc_attr( $c['hero-grad-dark-3'] )
     );
 }, 999 );

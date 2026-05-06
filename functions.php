@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-define( 'ZHUOER_VERSION', '1.0.75' );
+define( 'ZHUOER_VERSION', '1.0.76' );
 define( 'ZHUOER_DIR', get_template_directory() );
 
 /* ─── Theme Setup ─── */
@@ -203,6 +203,10 @@ function zhuoer_compute_colors( string $hex ): ?array {
         'hero-grad-dark-3'   => $hsl2h( $h360, max( 0, $s100 - 20 ), min( 80, $l100 - 10 ) ),
         'link-dark'          => $hsl2h( $h360, max( 0, $s100 - 20 ), min( 100, $l100 + 25 ) ),
         'link-hover-dark'    => $hsl2h( $h360, max( 0, $s100 - 15 ), min( 100, $l100 + 35 ) ),
+        'dark-primary-bg'    => sprintf( 'rgba(%d,%d,%d,0.15)', $rp * 255, $gp * 255, $bp * 255 ),
+        'dark-primary-border'=> sprintf( 'rgba(%d,%d,%d,0.30)', $rp * 255, $gp * 255, $bp * 255 ),
+        'dark-alpha'         => sprintf( 'rgba(%d,%d,%d,0.28)', $rp * 255, $gp * 255, $bp * 255 ),
+        'dark-alpha-2'       => sprintf( 'rgba(%d,%d,%d,0.10)', $rp * 255, $gp * 255, $bp * 255 ),
     );
 
     set_transient( $cache_key, $colors, 12 * HOUR_IN_SECONDS );
