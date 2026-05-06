@@ -1,7 +1,7 @@
 <?php
 /**
  * Product Archive Template (Main Shop Page)
- * Zhuoer Theme — Hypermarket Style
+ * Zhuoer Theme — Sidebar + Grid Layout
  *
  * @package ZHUOER
  */
@@ -12,15 +12,13 @@ get_header();
 
 $shop_page_id  = wc_get_page_id( 'shop' );
 $shop_page_url = $shop_page_id ? get_permalink( $shop_page_id ) : home_url( '/' );
+$has_shop_sidebar = is_active_sidebar( 'shop-sidebar' );
 ?>
 
 <?php do_action( 'woocommerce_before_main_content' ); ?>
 <main id="main-content" class="zhuoer-woo-main" role="main">
 
     <?php
-    /**
-     * Hero Banner — shop page uses a default gradient header
-     */
     $hero_title = woocommerce_page_title( false );
     ?>
     <div class="zhuoer-woo-hero zhuoer-woo-hero--shop">
@@ -32,9 +30,6 @@ $shop_page_url = $shop_page_id ? get_permalink( $shop_page_id ) : home_url( '/' 
     <div class="zhuoer-container zhuoer-container--wide">
 
         <?php
-        /**
-         * Breadcrumb
-         */
         woocommerce_breadcrumb( array(
             'delimiter'   => '<span class="zhuoer-breadcrumb__sep">›</span>',
             'wrap_before' => '<nav class="zhuoer-breadcrumb" aria-label="' . esc_attr__( '面包屑', 'zhuoer' ) . '"><ol class="zhuoer-breadcrumb__list">',
@@ -54,13 +49,21 @@ $shop_page_url = $shop_page_id ? get_permalink( $shop_page_id ) : home_url( '/' 
                 </div>
             </div>
 
-            <div class="zhuoer-woo-grid">
-                <?php
-                while ( have_posts() ) :
-                    the_post();
-                    wc_get_template_part( 'content', 'product' );
-                endwhile;
-                ?>
+            <div class="zhuoer-shop-layout<?php echo $has_shop_sidebar ? ' zhuoer-shop-layout--has-sidebar' : ''; ?>">
+                <?php if ( $has_shop_sidebar ) : ?>
+                    <?php get_sidebar( 'shop' ); ?>
+                <?php endif; ?>
+
+                <div class="zhuoer-shop-layout__main">
+                    <div class="zhuoer-woo-grid">
+                        <?php
+                        while ( have_posts() ) :
+                            the_post();
+                            wc_get_template_part( 'content', 'product' );
+                        endwhile;
+                        ?>
+                    </div>
+                </div>
             </div>
 
             <?php do_action( 'woocommerce_after_shop_loop' ); ?>

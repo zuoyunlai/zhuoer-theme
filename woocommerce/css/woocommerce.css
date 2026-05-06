@@ -26,6 +26,87 @@
 /* =============================================
    1. PRODUCT GRID
    ============================================= */
+
+/* Shop Layout: sidebar + main */
+.zhuoer-shop-layout {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.zhuoer-shop-sidebar {
+    width: 240px;
+    flex: 0 0 240px;
+    position: sticky;
+    top: calc(var(--zhuoer-header-height) + 1.5rem);
+    align-self: flex-start;
+    max-height: calc(100vh - var(--zhuoer-header-height) - 3rem);
+    overflow-y: auto;
+}
+
+.zhuoer-shop-sidebar__header {
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--zhuoer-color-border);
+}
+
+.zhuoer-shop-sidebar__heading {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--zhuoer-color-text);
+}
+
+.zhuoer-shop-layout__main {
+    flex: 1;
+    min-width: 0;
+}
+
+/* Shop filter widgets */
+.zhuoer-shop-filter {
+    margin-bottom: 1.25rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid var(--zhuoer-color-border);
+}
+
+.zhuoer-shop-filter:last-child {
+    border-bottom: none;
+}
+
+.zhuoer-shop-filter__title {
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin: 0 0 0.75rem 0;
+    color: var(--zhuoer-color-text);
+}
+
+/* Mobile: sidebar collapses above grid */
+@media (max-width: 768px) {
+    .zhuoer-shop-layout {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .zhuoer-shop-sidebar {
+        width: 100%;
+        flex: none;
+        position: static;
+        max-height: none;
+        overflow-y: visible;
+        padding: 0;
+        border-bottom: 1px solid var(--zhuoer-color-border);
+        padding-bottom: 1rem;
+    }
+
+    .zhuoer-shop-sidebar__header {
+        border-bottom: none;
+        padding-bottom: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+}
+
 .zhuoer-woo-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

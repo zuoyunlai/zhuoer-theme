@@ -1,6 +1,6 @@
 <?php
 /**
- * Product Category Archive Template — Hypermarket Style
+ * Product Category Archive Template — Sidebar + Grid Layout
  * Zhuoer Theme
  *
  * @package ZHUOER
@@ -16,6 +16,7 @@ $thumbnail_id  = get_term_meta( $term_id, 'thumbnail_id', true );
 $term_img      = $thumbnail_id ? wp_get_attachment_image_url( $thumbnail_id, 'full' ) : '';
 $term_name     = $term->name ?? '';
 $term_desc     = $term->description ?? '';
+$has_shop_sidebar = is_active_sidebar( 'shop-sidebar' );
 
 // Get subcategories of this category
 $subcategories = get_terms( array(
@@ -125,13 +126,21 @@ $shop_page_url = $shop_page_id ? get_permalink( $shop_page_id ) : home_url( '/' 
                 </div>
             </div>
 
-            <div class="zhuoer-woo-grid">
-                <?php
-                while ( have_posts() ) :
-                    the_post();
-                    wc_get_template_part( 'content', 'product' );
-                endwhile;
-                ?>
+            <div class="zhuoer-shop-layout<?php echo $has_shop_sidebar ? ' zhuoer-shop-layout--has-sidebar' : ''; ?>">
+                <?php if ( $has_shop_sidebar ) : ?>
+                    <?php get_sidebar( 'shop' ); ?>
+                <?php endif; ?>
+
+                <div class="zhuoer-shop-layout__main">
+                    <div class="zhuoer-woo-grid">
+                        <?php
+                        while ( have_posts() ) :
+                            the_post();
+                            wc_get_template_part( 'content', 'product' );
+                        endwhile;
+                        ?>
+                    </div>
+                </div>
             </div>
 
             <?php

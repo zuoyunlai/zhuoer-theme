@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-define( 'ZHUOER_VERSION', '1.0.76' );
+define( 'ZHUOER_VERSION', '1.0.77' );
 define( 'ZHUOER_DIR', get_template_directory() );
 
 /* ─── Theme Setup ─── */
@@ -365,6 +365,17 @@ function zhuoer_widgets_init() {
             'before_widget' => '<div id="%1$s" class="zhuoer-widget widget %2$s">',
             'after_widget'  => '</div>',
             'before_title'  => '<h4 class="zhuoer-widget__title">',
+            'after_title'   => '</h4>',
+        )
+    );
+    register_sidebar(
+        array(
+            'name'          => __( '商城筛选栏', 'zhuoer' ),
+            'id'            => 'shop-sidebar',
+            'description'   => __( '商城左侧筛选区，可添加价格筛选、属性筛选、分类等小工具。', 'zhuoer' ),
+            'before_widget' => '<div id="%1$s" class="zhuoer-shop-filter %2$s">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h4 class="zhuoer-shop-filter__title">',
             'after_title'   => '</h4>',
         )
     );
